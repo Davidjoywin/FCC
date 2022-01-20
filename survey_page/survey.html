@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./survey.css">
+        <title>Survey Form</title>
+    </head>
+    <body>
+        <h1 id="title">Web Development Form</h1>
+        <p id="description">Thank you for helping aspiring developer get better in web development.</p>
+        <div id="container">
+            
+            <form action="#">
+                
+                <label for="name" id="name-label">
+                    Name
+                    <input type="text" id="name" placeholder="Enter your Name...">
+                </label>
+                
+                <label for="email" id="email-label">
+                    Email
+                    <input type="email" id="email" placeholder="Enter your Email...">
+                </label>
+                
+                <label for="number" id="number-label">
+                    Programming Experience
+                    <input type="number" id="number" placeholder="Years of Experience..." min=0 max=50>
+                </label>
+                
+                <hr>
+                
+                <p>Which of option is your web development stack?</p>
+                <select name="tech-stack" id="drop-down">
+                    <option value="full stack">Full Stack Development</option>
+                    <option value="frontend">Frontend Development</option>
+                    <option value="backend">Backend Development</option>
+                </select>
+                
+            
+                <hr>
+                
+                <p>Would you recomment this Teck stack to someone?</p>
+                <label for="definitely">
+                    <input type="radio" class="refer" value="definitely" name="refer-someone">
+                    Definitely
+                </label>
+                    
+                <label for="maybe">
+                    <input type="radio" class="refer" value="maybe" name="refer-someone">
+                    Maybe
+                </label>
+                    
+                <label for="not sure">
+                    <input type="radio" class="refer" value="not sure" name="refer-someone">
+                     Not Sure
+                </label><br>
+
+                <p id="refer-answer"></p>
+                
+                <hr>
+                
+                <p>Best choice for choosen stack.</p>
+                <label for="python">
+                    <input type="checkbox" value="python" class="lang-choice">
+                    Python
+                </label>
+                
+                <label for="javascript">
+                    <input type="checkbox" value="javascript" class="lang-choice">
+                    Javascript
+                </label>
+                
+                <label for="css">
+                    <input type="checkbox" value="css" class="lang-choice">
+                    CSS
+                </label>
+                
+                <label for="html">
+                    <input type="checkbox" value="html" class="lang-choice">
+                    HTML
+                </label>
+                
+                <label for="PHP">
+                    <input type="checkbox" value="PHP" class="lang-choice">
+                    PHP
+                </label>
+                
+                <label for="ruby">
+                    <input type="checkbox" value="ruby" class="lang-choice">
+                    Ruby
+                </label>
+                
+                <label for="dart">
+                    <input type="checkbox" value="dart" class="lang-choice">
+                    Dart
+                </label>
+                <p class="lang-answer"></p>
+                
+                <hr>
+                
+                <label for="comments">
+                    Additional Comments...
+                    <textarea name="comments" id="comments" rows="5"></textarea>
+                </label>
+                
+                <input type="submit" id="submit" value="submit">
+            </form>
+        </div>
+        
+        <script>
+            const refer = document.querySelectorAll(".refer");
+            refer.forEach(element => {
+                if (element.checked){
+                    document.querySelector("#refer-answer").innerHTML = `You will recommend? '${(element.value).toUpperCase()}'`;
+                }
+            })
+            </script>
+
+
+</body>
+</html>

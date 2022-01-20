@@ -1,0 +1,151 @@
+:root{
+    --nav-bar: #020207;
+    --header-bar-height: 8rem;
+    --armburger: #fafae5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    position: relative;
+}
+
+#header-bar{
+    display: flex;
+    position: fixed;
+    height: 6rem;
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-between;
+    background: var(--nav-bar);
+}
+
+img{
+    width:2rem;
+    height: 3rem;
+    align-self: center;
+    padding-right: 4rem;
+}
+
+#nav-section{
+    display: grid;
+    position: absolute;
+    background: #05051a;
+    font-size: 120%;
+    line-height: 3rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    grid-template-columns: 35% 65%;
+    top: calc(var(--header-bar-height));
+    z-index: -1;
+}
+
+#navbar{
+    position: sticky;
+    top: var(--header-bar-height);
+    padding: 2rem;
+    height: 100vh;
+    background: var(--nav-bar);
+    overflow-y: scroll;
+}
+
+#nav-section, a{
+    color: var(--armburger);
+}
+
+a{
+    text-decoration: none;
+}
+
+
+#navbar header{
+    padding-top: .2rem;
+}
+
+#navbar header a:hover{
+    color: #c5c5c5;
+    font-size: 1.4rem;
+    transition: .3s
+}
+
+
+button{
+    border-width: 0;
+}
+
+#main-doc{
+    position: sticky;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    z-index: 1;
+}
+
+ul{
+    margin-bottom: 2rem;
+}
+
+ul li{
+    margin-left: 1.5rem;
+}
+
+
+/* For armburger*/
+#container{
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    background: var(--nav-bar);
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+#container:active{
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    background: #070707;
+    border-radius: 50%;
+}
+
+#item{
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    background: var(--armburger);
+}
+
+#item::before{
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 3px;
+    top: -8px;
+    left: .4px;
+    background: inherit;
+}
+#item::after{
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 3px;
+    top: 8px;
+    left: 0;
+    background: inherit;
+}
+/*---------------------------------------------*/
+
+
+.main-section{
+    margin-top: 5rem;
+}
+.main-section:nth-child(1){
+    margin-top: 0;
+}

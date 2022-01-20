@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="doc_style.css">
+    <link rel="doc icon" href="\Book Blue.ico">
+    <title>Rust Documentation</title>
+</head>
+<body>
+    <div id="header-bar">
+        <button id="container">
+            <div id="item"></div>
+        </button>
+        <img src="\Book Blue.ico" alt="Rust documetation icon">
+    </div>
+        
+    <div id="nav-section">
+        <nav id="navbar">
+            <header>
+                <a href="#introduction" class="nav-link">Introduction</a>
+            </header>
+        
+            <header>
+                <a href="#getting_started" class="nav-link">Getting Started</a>
+            </header>
+        
+            <header>
+                <a href="#installation" class="nav-link">Installation</a>
+            </header>
+        
+            <header>
+                <a href="#hello_world" class="nav-link">Hello, World!</a>
+            </header>
+        
+            <header>
+                <a href="#hello_cargo" class="nav-link">Hello, Cargo!</a>
+            </header>
+        
+            <header>
+                <a href="#programming_a_guessing_game" class="nav-link">Programming a Guessing Game</a>
+            </header>
+        
+            <header>
+                <a href="#common_programming_concepts" class="nav-link">Common Programming Concepts</a>
+            </header>
+        
+            <header>
+                <a href="#variables_and_mutability" class="nav-link">Variables and Mutability</a>
+            </header>
+        
+            <header>
+                <a href="#data_types" class="nav-link">Data Types</a>
+            </header>
+        
+            <header>
+                <a href="#functions" class="nav-link">Functions</a>
+            </header>
+        
+            <header>
+                <a href="#comments" class="nav-link">Comments</a>
+            </header>
+        
+            <header>
+                <a href="#control_flow" class="nav-link">Control Flow</a>
+            </header>
+        
+            <header>
+                <a href="#understanding_ownership" class="nav-link">Understanding Ownership</a>
+            </header>
+    
+            <header>
+                <a href="#what_is_ownership" class="nav-link">What is Ownership?</a>
+            </header>
+        
+            <header>
+                <a href="#references_and_borrowing" class="nav-link">References and Borrowing</a>
+            </header>
+        
+            <header>
+                <a href="#the_slice_type" class="nav-link">The Slice Type</a>
+            </header>
+        
+            <header>
+                <a href="#using_structs_to_structure_related_data" class="nav-link">Using Structs to Structure Related Data</a>
+            </header>
+        
+            <header>
+                <a href="#defining_and_instantiating_structs" class="nav-link">Defining and Instantiating Structs</a>
+            </header>
+        
+            <header>
+                <a href="#an_example_program_using_structs" class="nav-link">An Example Program Using Structs</a>
+            </header>
+                  
+            <header>
+                <a href="#method_syntax" class="nav-link">Method Syntax</a>
+            </header>
+        </nav>
+
+        <main id="main-doc">
+            <!--header should contain an id that correspond the text of each header-->
+            <section class="main-section" id="">
+                <header id="introduction">
+                    <h1>Introduction</h1>
+                </header>
+                <p>
+                    Welcome to The Rust Programming Language, an introductory book about Rust. 
+                    The Rust programming language helps you write faster, more reliable software. 
+                    High-level ergonomics and low-level control are often at odds in programming 
+                    language design; Rust challenges that conflict. Through balancing powerful 
+                    technical capacity and a great developer experience, Rust gives you the option 
+                    to control low-level details (such as memory usage) without all the hassle 
+                    traditionally associated with such control.
+                </p>
+
+                <h1>Who Rust Is For</h1>
+                <p>
+                    Rust is ideal for many people for a variety of reasons. 
+                    Let’s look at a few of the most important groups.
+                </p>
+
+                <h3>Team of Developers</h3>
+                <p>
+                    Rust is proving to be a productive tool for collaborating among large teams of 
+                    developers with varying levels of systems programming knowledge. Low-level code 
+                    is prone to a variety of subtle bugs, which in most other languages can be 
+                    caught only through extensive testing and careful code review by experienced 
+                    developers. In Rust, the compiler plays a gatekeeper role by refusing to compile 
+                    code with these elusive bugs, including concurrency bugs. By working alongside 
+                    the compiler, the team can spend their time focusing on the program’s logic rather 
+                    than chasing down bugs.
+                </p>
+                <p>Rust also brings contemporary developer tools to the systems programming world:</p>
+                <ul>
+                    <li>
+                        Cargo, the included dependency manager and build tool, make adding, 
+                        compiling and managing dependencies painless and consistent across the rust ecosystem.
+                    </li>
+
+                    <li>Rustfmt ensures a consistent coding style across developers.</li>
+                    <li>
+                        The Rust Language Server powers integrated DevelopmentEnvironment (IDE) 
+                        integration for the code completion and inline error messages.
+                    </li>
+                </ul>
+                    <p>By using these and other tools in the Rust ecosystem, developers can be productive while writing
+                        systems-level code.
+                    </p>    
+                <p><a href="https://doc.rust-lang.org/book/ch00-00-introduction.html">Introduction continues here...</a></p>
+            </section>
+            <section class="main-section" id="">
+                <header id="getting_started">
+                    <h1>
+                        Getting Started
+                    </h1>
+                </header>
+                <p>Let's start your journey! There's a lot to learn, but every journey starts somewhere. In This
+                    chapter, we’ll discuss:
+                </p>
+                <ul>
+                    <li>
+                        Installing Rust on Linux, macOS, and Windows
+                    </li>
+                    <li>Writing a program that prints <code>Hello, world!</code></li>
+                    <li>Using <code>cargo</code>, Rust's package manager and build system</li>
+                </ul>
+            </section>
+
+            <section class="main-section">
+                <header id="installation">
+                    <h1>Installation</h1>
+                </header>
+
+                <p>
+                    The first step is to install Rust. We’ll download Rust through rustup, a command 
+                    line tool for managing Rust versions and associated tools. You’ll need an internet 
+                    connection for the download.
+                </p>
+
+                <p>
+                    The following steps install the latest stable version of the Rust compiler. Rust’s 
+                    stability guarantees ensure that all the examples in the book that compile will 
+                    continue to compile with newer Rust versions. The output might differ slightly 
+                    between versions, because Rust often improves error messages and warnings. In 
+                    other words, any newer, stable version of Rust you install using these steps 
+                    should work as expected with the content of this book.
+                </p>
+
+                <blockquote>
+                    <h3>Command Line Notation</h3>
+                    <p>
+                        In this chapter and throughout the book, we’ll show some commands used in 
+                        the terminal. Lines that you should enter in a terminal all start with <code>$</code>. You 
+                        don’t need to type in the <code>$</code> character; it indicates the start of each command. 
+                        Lines that don’t start with <code>$</code> typically show the output of the previous command. 
+                        Additionally, PowerShell-specific examples will use > rather than <code>$</code>.
+                    </p>
+                </blockquote>
+
+                <h3>Installing rustup on Linux or macOS</h3>
+                <p>If you’re using Linux or macOS, open a terminal and enter the following command:</p>
+
+                <code>$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh</code>
+
+            </section>
+    
+            <section class="main-section" id="">
+                <header id="hello_world">
+                    <h1>Hello, World!</h1>
+                </header>
+    
+                <p>
+                    Now that you’ve installed Rust, let’s write your first Rust program. 
+                    It’s traditional when learning a new language to write a little program 
+                    that prints the text Hello, world! to the screen, so we’ll do the same here!
+                </p>
+    
+                <p class="note">
+                    Note: This book assumes basic familiarity with the command line. 
+                    Rust makes no specific demands about your editing or tooling or where 
+                    your code lives, so if you prefer to use an integrated 
+                    development environment (IDE) instead of the command line, feel free to use your favorite IDE. 
+                    Many IDEs now have some degree of Rust support; check the IDE’s documentation 
+                    for details. Recently, the Rust team has been focusing on enabling great 
+                    IDE support, and progress has been made rapidly on that front!
+                </p>
+    
+                <h3>Creating a Project Directory</h3>
+                <p>
+                    You’ll start by making a directory to store your Rust code. 
+                    It doesn’t matter to Rust where your code lives, but for 
+                    the exercises and projects in this book, we suggest 
+                    making a projects directory in your home directory and 
+                    keeping all your projects there.
+                </p>
+    
+                <p>
+                    Open a terminal and enter the following commands to make 
+                    a projects directory and a directory for 
+                    the “Hello, world!” project within the projects directory.
+                </p>
+    
+                <p>
+                    Open a terminal and enter the following commands to make 
+                    a projects directory and a directory for the 
+                    “Hello, world!” project within the projects directory.
+                </p>
+                <code>
+                    <p>$ mkdir ~/projects</p>
+                    <p>$ cd ~/projects</p>
+                    <p>$ mkdir hello_world</p>
+                    <p>$ cd hello_world</p>
+                </code>
+    
+                <p>For Windows CMD, enter this:</p>
+    
+                <code>
+                    <p>> mkdir "%USERPROFILE%\projects"</p>
+                    <p>> cd /d "%USERPROFILE%\projects"</p>
+                    <p>> mkdir hello_world</p>
+                    <p>> cd hello_world</p>
+                </code>
+    
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+    
+            <section class="main-section" id="">
+                <header id="hello_cargo">Hello, Cargo!</header>
+                <p></p>
+                <code>
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="programming_a_guessing_game">Programming a Guessing Game</header>
+                <p>A</p>
+                <code>
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="common_programming_concepts">Common Programming Concepts</header>
+                <p>A</p>
+                <code>
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="variables_and_mutability">Variables and Mutability</header>
+                <p>A</p>
+                <code>
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+    
+            <section class="main-section" id="">
+                <header id="data_types">Data Types</header>
+                <p>A</p>
+                <code>
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="functions">Functions</header>
+                <p>A</p>
+                <code>
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="comments">Comments</header>
+                <p>A</p>
+                <code>
+                    
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="control_flow">Control Flow</header>
+                <p>A</p>
+                <code>
+                    
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="understanding_ownership">Understanding Ownership</header>
+                <p>A</p>
+                <code>
+                    
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="what_is_ownership">What is Ownership?</header>
+                <p>A</p>
+                <code>
+                    
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="referencing_and_borrowing">References and Borrowing</header>
+                <p>A</p>
+                <code>
+                    \
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="the_slice_type">The Slice Type</header>
+                <p>A</p>
+                <code>
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="using_structs_to_stucture_related_data">Using Structs to Structure Related Data</header>
+                <p>A</p>
+                <code>
+                    
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                
+                <header id="defining_and_instantiating_structs">Defining and Instantiating Structs</header>
+                <p>A</p>
+                <code>
+                    
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="an_example_program_using_structs">An Example Program Using Structs</header>
+                <p>A</p>
+                <code>
+                    
+                </code>
+                <ul>
+                    <li>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="">
+                <header id="method_syntax">Method Syntax</header>
+                <p>A</p>
+                <code>
+                    
+                    <ul>
+                        <li>
+                        </li>
+                    </ul>
+                </section>
+                <p><b>Continue on the official rust <a href="doc.rust-org/book">Rust Documentation</a></b></p>
+            </main>
+    </div>
+
+        
+        <script>
+
+            let navbar = document.querySelector("#navbar");
+            let nav_section = document.querySelector("#nav-section");
+            let header_bar = document.getElementById("header-bar");
+            let item = document.querySelector("#item");
+            let item_before = document.querySelector("#item").before;
+            let item_after = document.querySelector("#item").after;
+
+            /*change the armburger to cross*/
+            document.querySelector("button").onclick = () => {
+                if (window.getComputedStyle(navbar).display === "block"){
+                    navbar.style.display = "none";
+                    nav_section.style.gridTemplateColumns = "100%";
+                    item.style.background = "red";
+                }
+                else{
+                    item.style.background = "white";
+                    navbar.style.display = "block";
+                    nav_section.style.gridTemplateColumns = "35% 65%";
+                }
+            }
+
+
+        </script>
+    </body>
+    </html>

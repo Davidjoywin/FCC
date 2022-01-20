@@ -1,0 +1,108 @@
+:root{
+    --background-color: #444444;
+    --color: #aaaaaa;
+}
+
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+#main{
+    padding: 5% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#img-div{
+    font-size: 2rem;
+}
+
+figcaption{
+    text-align: center;
+}
+
+#image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.heading{
+    /*Heading for each list*/
+    display: flex;
+    justify-content: center;
+    
+    font-size: 3.5rem !important;
+    letter-spacing: 1.2rem !important;
+}
+
+
+.list-div{
+    /* each list container*/
+
+    margin-top: 10rem;
+    animation-name: coming-up;
+    animation-duration: 4s;
+    animation-delay: -2s;
+    /*animation-iteration-count:infinite;*/
+    animation-timing-function: ease-out;
+}
+
+li{
+    font-size:150%;
+    line-height:1.8;
+    text-align: center;
+}
+
+@keyframes coming-up{
+    100% {
+        opacity: 1;
+        top: 0rem;
+    }
+    75% {
+        opacity: 0.75;
+        top: 3rem;
+    }
+    50% {
+        opacity: 0.50;
+        top: 6rem;
+    }
+    25% {
+        opacity: 0.25;
+        top: 9rem;
+    }
+    0% {
+        opacity: 0;
+        bottom: 0;
+
+    }
+}
+
+
+#title{
+    align-self: center;
+    letter-spacing: 2.5rem;
+    text-align: justify;
+}
+
+@media screen and (maxwidth:350px){
+}
+
+#tribute-info{
+    line-height: 5%;
+}
+#tribute-link{
+    text-decoration: none;
+}
+
+#tribute-link:hover{
+    text-decoration: underline;
+}

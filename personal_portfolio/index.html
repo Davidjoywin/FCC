@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Personal Portfolio</title>
+</head>
+
+<body>
+
+  <section id="welcome-section">
+    <div id="container">
+      <h1>David Joy Egunjobi</h1>
+      <p>Python Developer</p>
+      <p>Javascript Developer</p>
+      <p>Good Knowledge of HTML and CSS</p>
+      <p>Full Stack Web Developer</p>
+      <button>Explore</button>
+    </div>
+    
+  </section>
+
+  <section id="projects">
+
+    <section class="my-project">
+      <h1>project 1</h1>
+      <iframe src="C:\Users\joy\projects\FCC\landing_page\landing_page.html" frameborder="20"></iframe>
+    </section>
+    
+    <section class="my-project">
+      <h1>project 2</h1>
+    </section>
+
+    <section class="my-project">
+      <h1>project 3</h1>
+    </section>
+
+    <section class="my-project">
+      <h1>project 4</h1>
+    </section>
+
+  </section>
+
+  <script>
+    let button = document.querySelector("button");
+    let project = document.querySelector("#projects");
+    button.onclick = function() {
+      project.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
